@@ -1,0 +1,13 @@
+{
+  "globalHeaders": {
+    "Cache-Control": "no-cache"
+  },
+  "routes": [
+    {
+      "route": "/og-image.png",
+      "headers": {
+        "Cache-Control": "public, max-age=604800"
+      }
+    }
+  ]
+}

@@ -3,15 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Arkivklar – Søkbare prosjektarkiver</title>
-  <meta name="description" content="Vi gjør prosjektarkiver søkbare med OCR og strukturert registerføring. Ferdig leveransepakke, ingen installasjon, ingen IT-avhengigheter." />
-  <meta property="og:title" content="Arkivklar – Søkbare prosjektarkiver" />
-  <meta property="og:description" content="OCR, fulltekstsøk og strukturert dokumentregister. 100% lokal prosessering. Klart for drift fra dag én." />
+  <title>Arkivklar – Søkbare prosjektarkiver for infrastruktur</title>
+  <meta name="description" content="Vi gjør prosjektarkiver søkbare med OCR og strukturert registerføring. Ferdig leveransepakke for infrastrukturprosjekter — ingen installasjon, ingen IT-avhengigheter." />
+  <meta property="og:title" content="Arkivklar – Søkbare prosjektarkiver for infrastruktur" />
+  <meta property="og:description" content="OCR, fulltekstsøk og strukturert dokumentregister for infrastrukturprosjekter. 100% lokal prosessering. Klart for drift fra dag én." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://arkivklar.no" />
   <meta property="og:image" content="https://arkivklar.no/og-image.png" />
-  <link rel="alternate" hreflang="nb" href="https://arkivklar.no/" />
-  <link rel="alternate" hreflang="en" href="https://arkivklar.no/en/" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x='10' y='5' width='60' height='80' rx='8' fill='%233B8BF5' opacity='.2' stroke='%235BA3F7' stroke-width='4'/><line x1='25' y1='30' x2='55' y2='30' stroke='%235BA3F7' stroke-width='4' stroke-linecap='round'/><line x1='25' y1='45' x2='48' y2='45' stroke='%235BA3F7' stroke-width='4' stroke-linecap='round' opacity='.6'/><circle cx='72' cy='72' r='22' fill='%2334D399' opacity='.2' stroke='%2334D399' stroke-width='4'/><polyline points='60,72 68,80 84,64' fill='none' stroke='%2334D399' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/></svg>" />
@@ -48,7 +46,7 @@
     @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
     @keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
     @keyframes typing{from{width:0}to{width:100%}}
-    .reveal{opacity:0;transform:translateY(12px);transition:opacity .5s ease,transform .5s ease}
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
     .reveal.visible{opacity:1;transform:translateY(0)}
 
     /* ═══ NAV ═══ */
@@ -73,7 +71,7 @@
     .hero{padding:160px 0 100px;position:relative;overflow:hidden}
     .hero::before{content:'';position:absolute;width:800px;height:800px;border-radius:50%;background:radial-gradient(circle,rgba(59,139,245,.10) 0%,transparent 70%);top:-250px;right:-200px;pointer-events:none;animation:heroFloat 8s ease-in-out infinite}
     .hero::after{content:'';position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(52,211,153,.05) 0%,transparent 70%);bottom:-100px;left:-100px;pointer-events:none;animation:heroFloat 10s ease-in-out infinite reverse}
-    @keyframes heroFloat{0%,100%{transform:translate(0,0)}50%{transform:translate(4px,-6px)}}
+    @keyframes heroFloat{0%,100%{transform:translate(0,0)}50%{transform:translate(15px,-20px)}}
     .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse 70% 60% at 50% 40%,black,transparent);-webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 40%,black,transparent)}
     .hero-c{position:relative;z-index:2;max-width:720px}
     .hero-badge{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:.72rem;font-weight:500;text-transform:uppercase;letter-spacing:.12em;color:var(--accent-l);background:var(--accent-gl);border:1px solid rgba(59,139,245,.18);padding:6px 14px;border-radius:999px;margin-bottom:24px;animation:fadeUp .8s cubic-bezier(.16,1,.3,1) both}
@@ -358,7 +356,6 @@
         <a href="#teknologi">Teknologi</a>
         <a href="#faq">FAQ</a>
         <a href="#kontakt" class="nav-cta">Ta kontakt</a>
-        <a href="/en/" style="font-size:.8rem;font-weight:500;color:var(--text-d);padding:6px 10px;border:1px solid var(--border);border-radius:6px;transition:color .2s">English</a>
       </nav>
       <button class="nav-tog" id="navTog" aria-label="Meny"><span></span><span></span><span></span></button>
     </div>
@@ -369,9 +366,9 @@
     <div class="hero-grid"></div>
     <div class="wrap">
       <div class="hero-c">
-        <div class="hero-badge"><span class="dot"></span>Dokumenthåndtering for prosjekter</div>
+        <div class="hero-badge"><span class="dot"></span>Dokumenthåndtering for infrastruktur</div>
         <h1>Hvert dokument<br><span class="gr">søkbart og kontrollert</span></h1>
-        <p class="hero-sub">Slutt å lete i mapper. Vi gjør prosjektarkiver søkbare, strukturerte og revisjonssikre. Uten nye systemer, servere eller IT-prosjekter.</p>
+        <p class="hero-sub">Slutt å lete i mapper. Vi gjør prosjektarkiver søkbare, strukturerte og revisjonssikre — uten nye systemer, servere eller IT-prosjekter.</p>
         <div class="hero-acts">
           <a href="#demo" class="btn btn-p">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
@@ -400,13 +397,13 @@
       <div class="section-h reveal">
         <div class="kicker">Problemet</div>
         <h2>Kjenner du igjen dette?</h2>
-        <p>De fleste store prosjekter leverer dokumenter som ustrukturerte filer. Vi gjør dem til et søkbart, kontrollert arkiv.</p>
+        <p>De fleste infrastrukturprosjekter leverer dokumenter som ustrukturerte filer. Vi gjør dem til et søkbart, kontrollert arkiv.</p>
       </div>
       <div class="ba-grid reveal">
         <div class="ba-card ba-before">
           <div class="ba-label">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-            Før: Typisk prosjektarkiv
+            Før — Typisk prosjektarkiv
           </div>
           <div class="ba-body">
             <ul class="ba-items">
@@ -414,7 +411,7 @@
               <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>Skannede rapporter med tall som ikke kan søkes</li>
               <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>Duplikater ingen vet om før det er for sent</li>
               <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>Ingen oversikt over status eller kvalitet</li>
-              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>Timer brukt på leting, og risiko ved overlevering</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>Timer brukt på leting — risiko ved overlevering</li>
             </ul>
           </div>
         </div>
@@ -422,12 +419,12 @@
         <div class="ba-card ba-after">
           <div class="ba-label">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            Etter: Arkivklar-leveranse
+            Etter — Arkivklar-leveranse
           </div>
           <div class="ba-body">
             <ul class="ba-items">
               <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Fulltekstsøk på alle dokumenter i nettleseren</li>
-              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>OCR på alle bilder, så koordinater og tall blir søkbare</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>OCR på alle bilder — koordinater og tall søkbare</li>
               <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Duplikater automatisk identifisert og gruppert</li>
               <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Strukturert register med status og anbefalt handling</li>
               <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Åpne dokumentet direkte fra søk eller register</li>
@@ -560,14 +557,14 @@
   <!-- ═══ TJENESTER ═══ -->
   <section id="tjenester" class="section">
     <div class="wrap">
-      <div class="section-h reveal"><div class="kicker">Tjenester</div><h2>Alt du trenger for kontroll<br>på prosjektdokumentene</h2><p>Vi håndterer hele kjeden fra innhenting til ferdig leveransepakke, med fokus på kvalitet, søkbarhet og struktur.</p></div>
+      <div class="section-h reveal"><div class="kicker">Tjenester</div><h2>Alt du trenger for kontroll<br>på prosjektdokumentene</h2><p>Vi håndterer hele kjeden fra innhenting til ferdig leveransepakke — med fokus på kvalitet, søkbarhet og struktur.</p></div>
       <div class="feat-grid reveal">
-        <article class="feat"><div class="feat-ic" style="background:var(--accent-gl);color:var(--accent-l)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 7h.01M7 12h10M7 17h6"/></svg></div><h3>OCR og tekstuttrekk</h3><p>Vi gjør alle dokumenter søkbare, også skannede rapporter med tall, koordinater og målinger i bilder. Trenger du ekstra presisjon tilpasser vi OCR-motoren til prosjektet.</p><span class="tag-s">Avansert tekstgjenkjenning</span></article>
-        <article class="feat"><div class="feat-ic" style="background:var(--green-gl);color:var(--green)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><h3>Søkbart arkiv</h3><p>Raskt søkegrensesnitt direkte i nettleseren. Fulltekstsøk på tvers av tusenvis av dokumenter, ingen server nødvendig.</p><span class="tag-s">Nettleserbasert</span></article>
+        <article class="feat"><div class="feat-ic" style="background:var(--accent-gl);color:var(--accent-l)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 7h.01M7 12h10M7 17h6"/></svg></div><h3>OCR og tekstuttrekk</h3><p>Vi gjør alle dokumenter søkbare — også skannede rapporter med tall, koordinater og målinger i bilder. Trenger du ekstra presisjon tilpasser vi OCR-motoren til prosjektet.</p><span class="tag-s">Avansert tekstgjenkjenning</span></article>
+        <article class="feat"><div class="feat-ic" style="background:var(--green-gl);color:var(--green)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><h3>Søkbart arkiv</h3><p>Raskt søkegrensesnitt direkte i nettleseren. Fulltekstsøk på tvers av tusenvis av dokumenter — ingen server nødvendig.</p><span class="tag-s">Nettleserbasert</span></article>
         <article class="feat"><div class="feat-ic" style="background:var(--amber-gl);color:var(--amber)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><h3>Registerføring</h3><p>Strukturert oversikt i Excel med dokumentstatus, klassifisering og duplikatdeteksjon. Lett å vedlikeholde og dele.</p><span class="tag-s">Excel-basert register</span></article>
-        <article class="feat"><div class="feat-ic" style="background:var(--accent-gl);color:var(--accent-l)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div><h3>Komplett leveransepakke</h3><p>Du får alt i én pakke: søkemotor, filbrowser og register. Bare åpne og bruk, ingen installasjon eller IT-avhengigheter.</p><span class="tag-s">Plug & play</span></article>
+        <article class="feat"><div class="feat-ic" style="background:var(--accent-gl);color:var(--accent-l)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div><h3>Komplett leveransepakke</h3><p>Du får alt i én pakke: søkemotor, filbrowser og register. Bare åpne og bruk — ingen installasjon eller IT-avhengigheter.</p><span class="tag-s">Plug & play</span></article>
         <article class="feat"><div class="feat-ic" style="background:var(--green-gl);color:var(--green)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg></div><h3>Flerformat-støtte</h3><p>PDF, DOCX, XLSX, DWG og TXT. Metadata fra alle formater trekkes ut og gjøres tilgjengelig i ett felles søk.</p><span class="tag-s">PDF · DOCX · XLSX · DWG</span></article>
-        <article class="feat"><div class="feat-ic" style="background:var(--amber-gl);color:var(--amber)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div><h3>Skalerbar løsning</h3><p>Ingen øvre grense. Fra noen hundre til hundretusener av dokumenter, det handler bare om tid. Samme kvalitet og struktur uansett omfang.</p><span class="tag-s">Ubegrenset volum</span></article>
+        <article class="feat"><div class="feat-ic" style="background:var(--amber-gl);color:var(--amber)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div><h3>Skalerbar løsning</h3><p>Ingen øvre grense. Fra noen hundre til hundretusener av dokumenter — det handler bare om tid. Samme kvalitet og struktur uansett omfang.</p><span class="tag-s">Ubegrenset volum</span></article>
       </div>
     </div>
   </section>
@@ -575,11 +572,11 @@
   <!-- ═══ PROSESS ═══ -->
   <section id="prosess" class="section alt-bg">
     <div class="wrap">
-      <div class="section-h reveal"><div class="kicker">Prosess</div><h2>Fra kaos til kontroll i tre steg</h2><p>En tydelig prosess som gir deg full oversikt over dokumentene dine, uten installasjon eller IT-avhengigheter.</p></div>
+      <div class="section-h reveal"><div class="kicker">Prosess</div><h2>Fra kaos til kontroll — tre steg</h2><p>En tydelig prosess som gir deg full oversikt over dokumentene dine, uten installasjon eller IT-avhengigheter.</p></div>
       <div class="proc-list reveal">
         <div class="proc-step"><div class="step-n">01</div><div class="step-c"><h3>Avklaring og kartlegging</h3><p>Vi starter med en kort gjennomgang: antall dokumenter, filtyper, krav til struktur. Du får et forslag tilbake innen 48 timer.</p></div></div>
         <div class="proc-step"><div class="step-n">02</div><div class="step-c"><h3>Prosessering og kvalitetskontroll</h3><p>Vi kjører OCR og tekstuttrekk på alle dokumenter. Tekst, tall og koordinater indekseres for søk. Trenger du høyere presisjon avklarer vi hvilken OCR-motor som passer best for ditt prosjekt.</p></div></div>
-        <div class="proc-step"><div class="step-n">03</div><div class="step-c"><h3>Overlevering, klart for bruk</h3><p>Du mottar en komplett leveransepakke med søkbart arkiv, filbrowser og Excel-register. Alt kjører lokalt i nettleseren. Bare åpne og bruk.</p></div></div>
+        <div class="proc-step"><div class="step-n">03</div><div class="step-c"><h3>Overlevering — klart for bruk</h3><p>Du mottar en komplett leveransepakke med søkbart arkiv, filbrowser og Excel-register. Alt kjører lokalt i nettleseren — bare åpne og bruk.</p></div></div>
       </div>
     </div>
   </section>
@@ -587,11 +584,11 @@
   <!-- ═══ TEKNOLOGI ═══ -->
   <section id="teknologi" class="section">
     <div class="wrap">
-      <div class="section-h reveal"><div class="kicker">Teknologi</div><h2>Bygget for pålitelighet<br>og datasikkerhet</h2><p>All prosessering skjer lokalt. Du har full kontroll over dataene dine.</p></div>
+      <div class="section-h reveal"><div class="kicker">Teknologi</div><h2>Bygget for pålitelighet<br>og datasikkerhet</h2><p>Ingen data forlater maskinen. Alt prosesseres lokalt — du har full kontroll.</p></div>
       <div class="tech-grid reveal">
-        <div class="tech-card"><div class="tech-ic" style="background:var(--accent-gl);color:var(--accent-l)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 7h.01M7 12h10M7 17h6"/></svg></div><div><h3>Avansert OCR</h3><p>Kombinerer flere metoder for å trekke ut tekst fra alle lag i dokumentene, inkludert tall, koordinater og målinger i bilder.</p></div></div>
-        <div class="tech-card"><div class="tech-ic" style="background:var(--green-gl);color:var(--green)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div><div><h3>100% lokalt</h3><p>All prosessering skjer lokalt. Ingen skybaserte tjenester, ingen dataoverføring. Fullstendig GDPR-kompatibelt.</p></div></div>
-        <div class="tech-card"><div class="tech-ic" style="background:var(--amber-gl);color:var(--amber)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><div><h3>Lynrask søk</h3><p>Fulltekstsøk direkte i nettleseren. Ingen server nødvendig, fungerer offline og uten IT-avhengigheter.</p></div></div>
+        <div class="tech-card"><div class="tech-ic" style="background:var(--accent-gl);color:var(--accent-l)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 7h.01M7 12h10M7 17h6"/></svg></div><div><h3>Avansert OCR</h3><p>Kombinerer flere metoder for å trekke ut tekst fra alle lag i dokumentene — inkludert tall, koordinater og målinger i bilder.</p></div></div>
+        <div class="tech-card"><div class="tech-ic" style="background:var(--green-gl);color:var(--green)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div><div><h3>100% lokalt</h3><p>All prosessering skjer på maskinen. Ingen skybaserte tjenester, ingen dataoverføring. Fullstendig GDPR-kompatibelt.</p></div></div>
+        <div class="tech-card"><div class="tech-ic" style="background:var(--amber-gl);color:var(--amber)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><div><h3>Lynrask søk</h3><p>Fulltekstsøk direkte i nettleseren. Ingen server nødvendig — fungerer offline og uten IT-avhengigheter.</p></div></div>
         <div class="tech-card"><div class="tech-ic" style="background:var(--purple-gl);color:var(--purple)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><div><h3>Ferdig leveransepakke</h3><p>Alt du trenger i én pakke: søkemotor, filbrowser, register og oppstartsskript. Konsistent format, hver gang.</p></div></div>
       </div>
       <div class="compliance reveal">
@@ -631,7 +628,7 @@
       <div class="founder reveal" style="flex-direction:column;align-items:flex-start">
         <div class="role" style="margin-bottom:4px">Bak Arkivklar</div>
         <h3 style="font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:14px">Trym Magnusson</h3>
-        <p style="font-size:.92rem;color:var(--text-m);line-height:1.65;max-width:60ch">Jeg bygger Arkivklar fordi jeg så hvor mye tid prosjekter bruker på å lete etter dokumenter som burde vært søkbare for lengst. Løsningen er enkel: avansert OCR, strukturert register og en leveransepakke som bare fungerer. Uten nye systemer eller IT-avhengigheter.</p>
+        <p style="font-size:.92rem;color:var(--text-m);line-height:1.65;max-width:60ch">Jeg bygger Arkivklar fordi jeg så hvor mye tid infrastrukturprosjekter bruker på å lete etter dokumenter som burde vært søkbare for lengst. Løsningen er enkel: avansert OCR, strukturert register og en leveransepakke som bare fungerer — uten nye systemer eller IT-avhengigheter.</p>
         <div class="founder-links" style="margin-top:18px">
           <a href="mailto:post@arkivklar.no" style="color:var(--accent-l);background:var(--accent-gl)">post@arkivklar.no</a>
         </div>
@@ -645,11 +642,11 @@
       <div class="section-h reveal"><div class="kicker">Spørsmål</div><h2>Vanlige spørsmål</h2></div>
       <div class="faq-list reveal">
         <div class="faq-item"><div class="faq-q">Trenger vi å installere noe programvare?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div><div class="faq-a"><p>Nei. Leveransen kjører direkte i nettleseren. Du dobbeltklikker på oppstartsfilen, og alt er klart. Ingen installasjon, ingen serveroppsett, ingen IT-avhengigheter.</p></div></div>
-        <div class="faq-item"><div class="faq-q">Hvor mange dokumenter kan dere håndtere?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div><div class="faq-a"><p>Det er ingen øvre grense, det handler bare om tid. Vi håndterer alt fra noen hundre til hundretusener av dokumenter. Større volum tar litt lengre tid, men kvaliteten er den samme.</p></div></div>
-        <div class="faq-item"><div class="faq-q">Hva koster det?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div><div class="faq-a"><p>Prisen avhenger av volum og kompleksitet. Vi gir alltid fastpris etter en kort kartlegging, ingen overraskelser. Send oss prosjektomfang og antall dokumenter, så har du et konkret forslag innen 48 timer.</p></div></div>
-        <div class="faq-item"><div class="faq-q">Hva med GDPR og datasikkerhet?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div><div class="faq-a"><p>All prosessering skjer lokalt. Ingen data sendes til eksterne servere eller skybaserte tjenester. Vi signerer databehandleravtale ved behov.</p></div></div>
-        <div class="faq-item"><div class="faq-q">Hvilke filtyper støttes?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div><div class="faq-a"><p>PDF, DOCX, XLSX, DWG og TXT i dag. Vi bygger løpende støtte for flere formater etter behov. Har du spesielle krav til OCR-presisjon, for eksempel på håndskrift eller tekniske tegninger, avklarer vi hvilken motor som passer best.</p></div></div>
-        <div class="faq-item"><div class="faq-q">Hvor lang tid tar det?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div><div class="faq-a"><p>Det kommer an på volum og kompleksitet. Vi gir alltid et tidsestimat etter første avklaring, slik at du vet hva du kan forvente før vi starter.</p></div></div>
+        <div class="faq-item"><div class="faq-q">Hvor mange dokumenter kan dere håndtere?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div><div class="faq-a"><p>Det er ingen øvre grense — det handler bare om tid. Vi håndterer alt fra noen hundre til hundretusener av dokumenter. Større volum tar litt lengre tid, men kvaliteten er den samme.</p></div></div>
+        <div class="faq-item"><div class="faq-q">Hva koster det?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div><div class="faq-a"><p>Prisen avhenger av volum og kompleksitet. Vi gir alltid fastpris etter en kort kartlegging — ingen overraskelser. Send oss prosjektomfang og antall dokumenter, så har du et konkret forslag innen 48 timer.</p></div></div>
+        <div class="faq-item"><div class="faq-q">Hva med GDPR og datasikkerhet?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div><div class="faq-a"><p>All prosessering skjer lokalt på maskinen. Ingen data sendes til eksterne servere eller skybaserte tjenester. Vi signerer databehandleravtale ved behov.</p></div></div>
+        <div class="faq-item"><div class="faq-q">Hvilke filtyper støttes?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div><div class="faq-a"><p>PDF, DOCX, XLSX, DWG og TXT i dag. Vi bygger løpende støtte for flere formater etter behov. Har du spesielle krav til OCR-presisjon — for eksempel på håndskrift eller tekniske tegninger — avklarer vi hvilken motor som passer best.</p></div></div>
+        <div class="faq-item"><div class="faq-q">Hvor lang tid tar det?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div><div class="faq-a"><p>For et typisk prosjekt med noen hundre dokumenter: 1–2 uker fra avklaring til ferdig leveranse. Større prosjekter tar tilsvarende lengre, men vi gir alltid et tidsestimat i forkant.</p></div></div>
       </div>
     </div>
   </section>
@@ -660,7 +657,7 @@
       <div class="cta-card reveal">
         <div>
           <h2>Klar for en uforpliktende avklaring?</h2>
-          <p>Send oss prosjektomfang og estimert dokumentmengde, så kommer vi tilbake med et konkret forslag.</p>
+          <p>Send oss prosjektomfang og estimert dokumentmengde. Vi svarer med et konkret forslag til oppsett innen 48 timer.</p>
           <div class="hero-acts" style="margin-top:28px">
             <a href="mailto:post@arkivklar.no" class="btn btn-p"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Send e-post</a>
           </div>
@@ -771,15 +768,7 @@ function renderResults(query) {
     const idx = d.text.toLowerCase().indexOf(q);
     let snippet = '';
     if (idx >= 0) {
-      const start = Math.max(0, idx - 30);
-      const end = Math.min(d.text.length, idx + q.length + 40);
-      snippet = (start > 0 ? '...' : '') + d.text.substring(start, end) + (end < d.text.length ? '...' : '');
-    }
-    return `<div class="d-result" onclick="openDocFromSearch('${d.id}')">
-      <div class="d-result-icon ${ext}">${ext.toUpperCase()}</div>
-      <div class="d-result-info">
-        <h4>${highlight(d.title, query)}</h4>
-        <p class="meta">${d.size}${d.pages ? ' · ' + d.pages + ' sider' : ''} · ${d.cat} · ${d.area}</p>
+      const start = Math.max(0, idx       <p class="meta">${d.size}${d.pages ? ' · ' + d.pages + ' sider' : ''} · ${d.cat} · ${d.area}</p>
         ${snippet ? '<p class="meta" style="margin-top:4px;color:var(--text-m)">' + highlight(snippet, query) + '</p>' : ''}
       </div>
       <span class="match">✓ ${matchCount} treff</span>
@@ -944,9 +933,9 @@ regBody.innerHTML = regData.map(r => {
 // ─── DOCUMENT VIEWER ───
 const docPreviews = [
   { title:'Geoteknisk rapport profil 3', meta:['PDF · 3.2 MB · 14 sider','Survey · VA – Avløp','OCR: Fullført ✓'], body:'<p>Grunnundersøkelse utført langs profil 3 i henhold til prosjektspesifikasjon.</p><p>Koordinat: <span class="highlight">N6588234 E589012</span></p><p>Setning målt til <span class="highlight">24.3749 mm</span> ved KP 64+200.</p><p>Prøveserie viser bæreevne 185 kPa. Leirmektighet 8.2m ved borepunkt B-14.</p>' },
-  { title:'Inspeksjon SC.16 SD65540H', meta:['PDF · 420 KB · 3 sider','Inspection · VA – Avløp','OCR: Fullført ✓'], body:'<p>Visuell inspeksjon av ventilkum SC.16.</p><p>Tilstand: <span class="highlight">God, ingen lekkasje observert</span></p><p>Siste vedlikehold: 12.03.2024. Neste kontroll: 12.03.2025.</p><p>Koordinat: N6588501 E589234.</p>' },
+  { title:'Inspeksjon SC.16 SD65540H', meta:['PDF · 420 KB · 3 sider','Inspection · VA – Avløp','OCR: Fullført ✓'], body:'<p>Visuell inspeksjon av ventilkum SC.16.</p><p>Tilstand: <span class="highlight">God — ingen lekkasje observert</span></p><p>Siste vedlikehold: 12.03.2024. Neste kontroll: 12.03.2025.</p><p>Koordinat: N6588501 E589234.</p>' },
   { title:'Brannventilpakke S-0910', meta:['PDF · 2.1 MB · 6 sider','Specification · VA – Avløp','OCR: Fullført ✓'], body:'<p>Spesifikasjon brannventil type S-0910.</p><p>Nominell størrelse: <span class="highlight">DN150</span> · Arbeidstrykk: <span class="highlight">PN16</span></p><p>Material: duktilt støpejern. Overflatebehandling: epoksy RAL 3000.</p>' },
-  { title:'Frostsikring øvre lag 64185-64205', meta:['PDF · 1.8 MB · 8 sider','Survey · Frostsikring','OCR: Fullført ✓'], body:'<p>Kontroll frostsikring øvre lag fra stasjon 64+185 til 64+205.</p><p>Isolasjon: <span class="highlight">100mm XPS</span>. Temperaturlogg: -2.3°C ved 0.8m dybde.</p><p>Koordinat: <span class="highlight">24.2534</span>, ekstrahert fra bilde via OCR.</p>' },
+  { title:'Frostsikring øvre lag 64185-64205', meta:['PDF · 1.8 MB · 8 sider','Survey · Frostsikring','OCR: Fullført ✓'], body:'<p>Kontroll frostsikring øvre lag fra stasjon 64+185 til 64+205.</p><p>Isolasjon: <span class="highlight">100mm XPS</span>. Temperaturlogg: -2.3°C ved 0.8m dybde.</p><p>Koordinat: <span class="highlight">24.2534</span> — ekstrahert fra bilde via OCR.</p>' },
   { title:'Frostsikring nedre lag 64425-64500', meta:['PDF · 3.1 MB · 15 sider','Survey · Frostsikring','OCR: Fullført ✓'], body:'<p>Kontroll frostsikring nedre lag. Stasjon 64+425 til 64+500.</p><p>Isolasjon: 80mm XPS under forsterkningslag. Målt tykkelse OK.</p><p>Setning: <span class="highlight">1.2 mm</span></p>' },
   { title:'Forsterkningslag 64220-64280', meta:['PDF · 4.5 MB · 22 sider','Survey · Forsterkningslag','OCR: Fullført ✓'], body:'<p>Kontrollmåling forsterkningslag fra 64+220 til 64+280.</p><p>Tykkelse: <span class="highlight">500mm pukk 20-120</span>. Komprimeringsgrad: 97.2%.</p><p>Koordinat: <span class="highlight">24.8891</span>. Setning: 3.1mm. Prøve P-127.</p>' },
 ];
