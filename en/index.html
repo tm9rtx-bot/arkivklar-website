@@ -55,7 +55,7 @@
       --shadow-card:0 6px 20px rgba(15,23,42,.08),0 24px 60px rgba(15,23,42,.06);
       --table-head:#EFF1F5;--code-bg:rgba(15,23,42,.03);
     }
-    body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;overscroll-behavior:none;transition:background .3s ease,color .3s ease}
+    body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;overscroll-behavior:none;transition:background .3s ease,color .3s ease;padding-top:64px}
     ::selection{background:var(--accent);color:#fff}
     a{text-decoration:none;color:inherit}
     .wrap{width:min(1120px,90%);margin:0 auto}
@@ -88,6 +88,7 @@
     .nav-cta{background:var(--accent);color:#fff !important;padding:8px 18px;border-radius:10px;font-weight:600;font-size:.875rem;transition:all .2s;box-shadow:0 0 20px rgba(59,139,245,.2)}
     .nav-cta:hover{background:var(--accent-l);box-shadow:0 0 30px rgba(59,139,245,.35);transform:translateY(-1px)}
     .nav-cta::after{display:none !important}
+    .nav-right{display:none;align-items:center;gap:8px}
     .nav-tog{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px}
     .nav-tog span{width:22px;height:2px;background:var(--text-m);border-radius:2px;transition:all .3s;transform-origin:center}
     .nav-tog.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
@@ -102,7 +103,7 @@
     .lang-switch::after{display:none !important}
 
     /* ═══ HERO ═══ */
-    .hero{padding:160px 0 100px;position:relative;overflow:hidden}
+    .hero{padding:96px 0 100px;position:relative;overflow:hidden}
     .hero::before{content:'';position:absolute;width:800px;height:800px;border-radius:50%;background:radial-gradient(circle,rgba(59,139,245,.10) 0%,transparent 70%);top:-250px;right:-200px;pointer-events:none;animation:heroFloat 8s ease-in-out infinite}
     .hero::after{content:'';position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(52,211,153,.05) 0%,transparent 70%);bottom:-100px;left:-100px;pointer-events:none;animation:heroFloat 10s ease-in-out infinite reverse}
     @keyframes heroFloat{0%,100%{transform:translate(0,0)}50%{transform:translate(0,0)}}
@@ -384,9 +385,9 @@
 
     /* ═══ RESPONSIVE ═══ */
     @media(max-width:860px){
-      .nav-l{display:none}.nav-tog{display:flex}
+      .nav-l{display:none}.nav-tog{display:flex}.nav-right{display:flex}
       .nav-l.open{display:flex;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:var(--nav-bg);backdrop-filter:blur(20px);padding:20px;gap:16px;border-bottom:1px solid var(--border);z-index:101}
-      .hero{padding:120px 0 80px}
+      .hero{padding:56px 0 80px}
       .stats-grid{grid-template-columns:repeat(3,1fr)}
       .feat-grid{grid-template-columns:1fr}
       .tech-grid{grid-template-columns:1fr}
@@ -463,14 +464,16 @@
         <a href="#process">Process</a>
         <a href="#technology">Technology</a>
         <a href="#faq">FAQ</a>
+        <a href="/" class="lang-switch" aria-label="Norsk">NO</a>
+        <a href="#contact" class="nav-cta">Get in touch</a>
+      </nav>
+      <div class="nav-right">
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" aria-pressed="false">
           <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
           <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
-        <a href="/" class="lang-switch" aria-label="Norsk">NO</a>
-        <a href="#contact" class="nav-cta">Get in touch</a>
-      </nav>
-      <button class="nav-tog" id="navTog" aria-label="Menu"><span></span><span></span><span></span></button>
+        <button class="nav-tog" id="navTog" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
     </div>
   </header>
   <div class="nav-overlay" id="navOverlay"></div>
