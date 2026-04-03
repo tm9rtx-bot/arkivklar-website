@@ -74,7 +74,8 @@
     
 
     /* ═══ NAV ═══ */
-    .nav{position:fixed;top:0;left:0;width:100%;z-index:1000;background:var(--bg);border-bottom:1px solid var(--border);box-shadow:0 1px 4px rgba(0,0,0,.08);-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-backface-visibility:hidden;backface-visibility:hidden;padding-top:env(safe-area-inset-top)}
+    .nav{position:fixed;top:0;left:0;width:100%;height:64px;z-index:9999;background:var(--bg);border-bottom:1px solid var(--border);box-shadow:0 1px 4px rgba(0,0,0,.08);-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-backface-visibility:hidden;backface-visibility:hidden}
+    .nav::before{content:'';position:absolute;top:-100px;left:0;width:100%;height:100px;background:var(--bg)}
     .nav-i{height:64px;display:flex;justify-content:space-between;align-items:center}
     .logo{font-weight:700;font-size:1.15rem;letter-spacing:-.02em;display:flex;align-items:center;gap:10px;white-space:nowrap}
     .logo-icon{width:32px;height:32px;flex-shrink:0}
@@ -94,7 +95,7 @@
     .nav-tog.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
     .nav-tog.open span:nth-child(2){opacity:0}
     .nav-tog.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-    .nav-overlay{display:none;position:fixed;inset:0;top:calc(64px + env(safe-area-inset-top));z-index:99;background:rgba(0,0,0,.4)}
+    .nav-overlay{display:none;position:fixed;inset:0;top:64px;z-index:9998;background:rgba(0,0,0,.4)}
     .nav-overlay.open{display:block}
 
 
@@ -386,7 +387,7 @@
     /* ═══ RESPONSIVE ═══ */
     @media(max-width:860px){
       .nav-l{display:none}.nav-tog{display:flex}
-      .nav-l.open{display:flex;flex-direction:column;position:absolute;top:calc(64px + env(safe-area-inset-top));left:0;right:0;background:var(--bg);padding:20px;gap:16px;border-bottom:1px solid var(--border);z-index:1001}
+      .nav-l.open{display:flex;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:var(--bg);padding:20px;gap:16px;border-bottom:1px solid var(--border);z-index:10000}
       .hero{padding:56px 0 80px}
       .stats-grid{grid-template-columns:repeat(3,1fr)}
       .feat-grid{grid-template-columns:1fr}
@@ -476,8 +477,8 @@
       </div>
     </div>
   </header>
-  <div class="nav-spacer" style="height:calc(64px + env(safe-area-inset-top))"></div>
   <div class="nav-overlay" id="navOverlay"></div>
+  <main style="margin-top:64px">
 
   <!-- ═══ HERO ═══ -->
   <section class="hero">
@@ -792,6 +793,7 @@
     </div>
   </section>
 
+  </main>
   <footer><div class="wrap foot-i"><div class="foot-l">© <span id="yr"></span> Arkivklar Magnusson · Struktur · Søk · Kontroll</div><div class="foot-r"><a href="#demo">Demo</a><a href="#tjenester">Tjenester</a><a href="#prosess">Prosess</a><a href="#kontakt">Kontakt</a></div></div></footer>
 
 <div class="toast" id="toast"></div>
