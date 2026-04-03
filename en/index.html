@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="color-scheme" content="dark light" />
   <title>Arkivklar – Searchable Project Archives</title>
   <meta name="description" content="We make project archives searchable with OCR and structured indexing. Complete delivery package, no installation, no IT dependencies." />
@@ -22,7 +22,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: auto; overscroll-behavior: none; }
+    html { scroll-behavior: auto; overscroll-behavior: none; overflow-x: hidden; }
     :root {
       --mono:'JetBrains Mono',monospace;--sans:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;
       --r:12px;--r-l:18px;
@@ -55,7 +55,7 @@
       --shadow-card:0 6px 20px rgba(15,23,42,.08),0 24px 60px rgba(15,23,42,.06);
       --table-head:#EFF1F5;--code-bg:rgba(15,23,42,.03);
     }
-    body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;overscroll-behavior:none;transition:background .3s ease,color .3s ease;padding-top:64px}
+    body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;overscroll-behavior:none;padding-top:64px}
     ::selection{background:var(--accent);color:#fff}
     a{text-decoration:none;color:inherit}
     .wrap{width:min(1120px,90%);margin:0 auto}
@@ -74,7 +74,7 @@
     
 
     /* ═══ NAV ═══ */
-    .nav{position:fixed;top:0;left:0;width:100%;z-index:1000;background:var(--bg);border-bottom:1px solid var(--border);-webkit-transform:translateZ(0);transform:translateZ(0)}
+    .nav{position:fixed;top:0;left:0;width:100%;z-index:1000;background:var(--bg);border-bottom:1px solid var(--border);-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-backface-visibility:hidden;backface-visibility:hidden}
     .nav-i{height:64px;display:flex;justify-content:space-between;align-items:center}
     .logo{font-weight:700;font-size:1.15rem;letter-spacing:-.02em;display:flex;align-items:center;gap:10px;white-space:nowrap}
     .logo-icon{width:32px;height:32px;flex-shrink:0}
@@ -343,7 +343,7 @@
     [data-theme="light"] .theme-toggle .icon-sun{opacity:1;transform:rotate(0) scale(1)}
     [data-theme="light"] .theme-toggle .icon-moon{opacity:0;transform:rotate(90deg) scale(.5)}
     /* Light theme specific overrides */
-    [data-theme="light"] .nav{backdrop-filter:blur(20px) saturate(1.2);border-bottom:1px solid var(--border-l);box-shadow:0 1px 3px rgba(15,23,42,.04)}
+    [data-theme="light"] .nav{border-bottom:1px solid var(--border-l);box-shadow:0 1px 3px rgba(15,23,42,.04)}
     [data-theme="light"] .btn-p{background:#1D4FBF;box-shadow:0 4px 12px rgba(37,88,208,.25),0 16px 40px rgba(37,88,208,.15);color:#fff}
     [data-theme="light"] .btn-p:hover{background:#1843A8;box-shadow:0 6px 16px rgba(37,88,208,.30),0 20px 50px rgba(37,88,208,.20);transform:translateY(-2px)}
     [data-theme="light"] .btn-s{background:var(--bg-r);border:1px solid var(--border-m);box-shadow:0 1px 3px rgba(15,23,42,.06)}
